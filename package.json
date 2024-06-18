@@ -1,0 +1,20 @@
+{
+  "name": "anguler-space-x",
+  "private": true,
+  "description": "A tutorial application for AngularJS",
+  "dependencies": {
+    "angular": "^1.8.1",
+    "angular-animate": "1.8.x",
+    "angular-resource": "1.8.x",
+    "angular-route": "1.8.x",
+    "bootstrap": "^5.3.3"
+  },
+  "scripts": {
+    "update-deps": "npm update",
+    "prestart": "npm install",
+    "start": "http-server -c-1"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}
