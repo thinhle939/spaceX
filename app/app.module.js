@@ -1,0 +1,1 @@
+angular.module('spaceXApp', ['ngCookies','ngRoute', 'userLogin', 'shipList'])
