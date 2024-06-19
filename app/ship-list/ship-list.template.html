@@ -1,1 +1,18 @@
-hihihi
+<div class="container">
+    <ul>
+      <li class="d-flex mt-3 mb-4 justify-content-start" ng-repeat="data in $ctrl.data">
+        <div class="image-space"> 
+          <a href="#!/ships/{{data.id}}" class="thumb">
+            <img class="ship-images" ng-src="app/img/ship/app.config.jpeg">
+          </a>
+        </div>
+        <div class="mx-3 w-100">
+          <a href="#!/ships/{{data.id}}" >
+            <b>{{data.name}}</b>
+          </a>
+          <dd>Role: {{data.roles[0]}}</dd>
+          <dd>Home port: {{data.home_port}}</dd>
+        </div>
+      </li>
+  </ul>
+</div>

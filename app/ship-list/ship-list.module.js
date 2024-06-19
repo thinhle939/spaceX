@@ -1,1 +1,1 @@
-angular.module('shipList', [])
+angular.module('shipList', ['core.ship'])
