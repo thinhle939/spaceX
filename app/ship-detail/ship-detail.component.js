@@ -4,16 +4,16 @@ angular.
   module('shipDetail').
   component('shipDetail', {
     templateUrl: 'app/ship-detail/ship-detail.template.html',
-    controller: ['$routeParams', 'Ship',
-      function shipDetailController($routeParams, Ship) {
-        var self = this;
-        self.ship = Ship.get({shipId: $routeParams.shipId}, function(ship) {
-          // self.setImage(ship.images[0]);
-        });
+    controller: ['$routeParams', '$http',
+      function shipDetailController($routeParams, $http) {
+        let vm = this;
+        let apiUrl = 'https://api.spacexdata.com/v4/ships/' + $routeParams.shipId
 
-        self.setImage = function setImage(imageUrl) {
-          // self.mainImageUrl = imageUrl;
-        };
+        $http.get(apiUrl).
+          then(function(response) {
+            vm.data = response.data
+          }
+        )
       }
     ]
   });
