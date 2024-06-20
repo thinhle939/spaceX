@@ -20,3 +20,15 @@
     background-color: #007bff;
     border-color: #007bff;
   }
+
+  .space-x-nav{
+    background-color: rgb(116 185 255);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .ship-images {
+    background-color: white;
+    overflow: hidden;
+    position: relative;
+    width: 450px;
+  }

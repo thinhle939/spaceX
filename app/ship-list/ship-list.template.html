@@ -1,1 +1,40 @@
-hihihi
+<div nav-bar></div>
+<div class="d-flex mt-3 container">
+  <!-- <div class="search mx-4">
+    <p>
+      Search:
+      <input ng-model="$ctrl.query" />
+    </p>
+  </div> -->
+  <div class="">
+    <ul class="">
+      <li class="d-flex mb-4 justify-content-start" ng-repeat="data in $ctrl.data.docs | filter:$ctrl.query ">
+        <div class="image-space"> 
+          <a href="#!/ships/{{data.id}}" class="thumb">
+            <img class="ship-images" ng-src="app/img/ship/app.config.jpeg">
+          </a>
+        </div>
+        <div class="mx-3 w-100">
+          <a href="#!/ships/{{data.id}}" >
+            <b>{{data.name}}</b>
+          </a>
+          <dd>Role: {{data.roles[0]}}</dd>
+          <dd>Home port: {{data.home_port}}</dd>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+<div class="container d-flex justify-content-center my-3">
+<nav aria-label="Page navigation example">
+  <div>Current page: {{$ctrl.page}}</div>
+  <ul class="pagination">
+    
+    <li class="page-item"><a class="page-link" ng-click="$ctrl.prevPage($ctrl.page)">Previous</a></li>
+    <li class="page-item"><a class="page-link" ng-click="$ctrl.firstPages()">1</a></li>
+    <li class="page-item"><a class="page-link" ng-click="$ctrl.secondPages()">2</a></li>
+    <li class="page-item"><a class="page-link" ng-click="$ctrl.thirPages()">3</a></li>
+    <li class="page-item"><a class="page-link" ng-click="$ctrl.nextPage($ctrl.page)">Next</a></li>
+  </ul>
+</nav>
+</div>

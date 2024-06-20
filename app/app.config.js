@@ -8,8 +8,8 @@ angular.
         when('/login', {
           template: '<user-login></user-login>'
         }).
-        when('/phones/:phoneId', {
-          template: '<phone-detail></phone-detail>'
+        when('/ships/:shipId', {
+          template: '<ship-detail></ship-detail>'
         }).
         when('/ship-list', {
           template: '<ship-list></ship-list>'
