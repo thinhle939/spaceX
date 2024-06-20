@@ -32,3 +32,11 @@
     position: relative;
     width: 450px;
   }
+
+.logo-space {
+  width: 4%;
+}
+
+.space-x-logo {
+  height: 70px;
+}

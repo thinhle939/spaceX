@@ -5,6 +5,8 @@ angular.module('shipList').
       function shipListController(Ship, $http) {
         var vm = this;
         
+        const nextPageObservable = new rxjs.Subject();
+        
         function fetchData(goToPage) {
           var requestBody = {
             "options": {
@@ -14,7 +16,6 @@ angular.module('shipList').
           Ship.save({}, requestBody).$promise.then(res => {
             vm.data = res
             vm.page = res.page
-            vm.totalPage = re.totalPage
           })
         }
 
@@ -35,13 +36,17 @@ angular.module('shipList').
 
         vm.nextPage = function(currentPage) {
           page = currentPage + 1
-          fetchData(page)
+          nextPageObservable.next(page)
         }
+
+        nextPageObservable.subscribe(page => {
+          fetchData(page)
+        })
 
         vm.prevPage = function(currentPage) {
           if(currentPage > 1)  {
             page = currentPage - 1 
-            fetchData(page)
+            nextPageObservable.next(page)
           }
         }
 
