@@ -3,19 +3,17 @@
       <div class="login-header">
           <h2>Login</h2>
       </div>
-      <form ng-submit="myLoginFunc()">
+      <form ng-submit="myLoginFunc($event)">
           <div class="mb-3">
-              <label for="exampleInputName" class="form-label">Name</label>
-              <input id="exampleInputName" class="form-control" type="text" ng-model="userName" required>
+              <label for="userName" class="form-label">Name</label>
+              <input id="userName" class="form-control" type="text" ng-model="userName" required>
           </div>
           <div class="mb-3">
-              <label for="exampleInputSdt" class="form-label">Phone Number</label>
-              <input id="exampleInputSdt" type="text" class="form-control" ng-model="phoneNumber" required>
+              <label for="passWord" class="form-label">Password</label>
+              <input id="passWord" type="text" class="form-control" ng-model="password" required>
+              <span class="password-invalid"> can nhap dung pass word </span>
           </div>
           <button type="submit" class="btn btn-primary w-100">Submit</button>
-          <div ng-if="UserLogined">
-           welcome to my App, {{saveUsername}}
-          </div>
       </form>
   </div>
 </div>

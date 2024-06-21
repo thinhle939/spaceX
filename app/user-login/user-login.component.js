@@ -7,7 +7,7 @@ angular.
     controller: ['$scope', '$location', '$cookies',
       function UserLoginController($scope, $location, $cookies) {
         $scope.userName = '';
-        $scope.phoneNumber = '';
+        $scope.password = '';
         $scope.saveUsername = '';
 
         $scope.myLoginFunc = function() {
